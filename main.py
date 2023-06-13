@@ -199,7 +199,7 @@ async def roll(ctx,
     '''
     # Case for invalid roll passed
     if arg == None or not validate_roll_args(arg.lower()):
-        await ctx.send(f'{ctx.message.author.mention} Lachesis received an invalid roll! Use the highlighted characters for rolls:\r'\
+        await ctx.send(f'{ctx.message.author.mention} Received an invalid roll! Use the highlighted characters for rolls:\r'\
                     f'**f**orce ({EmojiKeys.FORCE.value})\r'\
                     f'**p**roficiency ({EmojiKeys.PROFICIENCY.value})\r'\
                     f'**a**bility ({EmojiKeys.ABILITY.value})\r'\
