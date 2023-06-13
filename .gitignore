@@ -1,0 +1,9 @@
+# Conda environment
+.conda
+
+# API key
+API_KEY
+
+# Hidden files
+__pycache__
+*.pyc
