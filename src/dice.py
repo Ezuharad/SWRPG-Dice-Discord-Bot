@@ -27,6 +27,13 @@ class ResultKeys(Enum):
 
 
 def get_canceled_dice(roll: RollResult) -> RollResult:
+    '''
+    :brief: cancels opposing symbols in `roll`.
+
+    Cancels successes and failures / advantages and threats in the roll.
+
+    :returns: the canceled result.
+    '''
     result: RollResult = get_empty_roll_result()
 
     # Add other values
@@ -53,7 +60,12 @@ def get_canceled_dice(roll: RollResult) -> RollResult:
 
 
 def get_empty_roll_result() -> RollResult:
-    empty_result: dict[str, int] = dict()
+    '''
+    :brief: returns a RollResult with 0 at all ResultKey entries.
+
+    :returns: a RollResult with 0 at all ResultKey entries.
+    '''
+    empty_result: RollResult = dict()
     for key in ResultKeys:
         empty_result[key.value] = 0
 
@@ -61,6 +73,13 @@ def get_empty_roll_result() -> RollResult:
 
 
 def get_roll_result_from_die_key(die_key: str) -> RollResult:
+    '''
+    :brief: returns the result of a die roll corresponding to `die_key`.
+
+    :param die_key: the die to roll.
+
+    :returns: the result of a die roll corresponding to `die_key`
+    '''
     match(die_key):
         case DieKeys.ABILITY.value:
             return roll_ability()
@@ -79,6 +98,11 @@ def get_roll_result_from_die_key(die_key: str) -> RollResult:
 
 
 def roll_ability() -> RollResult:
+    '''
+    :brief: returns the result of an ability die roll.
+
+    :returns: the result of an ability die roll.
+    '''
     result: RollResult = get_empty_roll_result()
     
     n: int = randint(0, 7)
@@ -101,6 +125,11 @@ def roll_ability() -> RollResult:
 
 
 def roll_difficulty() -> RollResult:
+    '''
+    :brief: returns the result of a difficulty die roll.
+
+    :returns: the result of a difficulty die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 7)
@@ -123,6 +152,11 @@ def roll_difficulty() -> RollResult:
 
 
 def roll_boost() -> RollResult:
+    '''
+    :brief: returns the result of a boost die roll.
+
+    :returns: the result of a boost die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 5)
@@ -143,6 +177,11 @@ def roll_boost() -> RollResult:
 
 
 def roll_setback() -> RollResult:
+    '''
+    :brief: returns the result of a setback die roll.
+
+    :returns: the result of a setback die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 5)
@@ -157,7 +196,12 @@ def roll_setback() -> RollResult:
     return result
 
 
-def roll_proficiency() -> RollResult: 
+def roll_proficiency() -> RollResult:
+    '''
+    :brief: returns the result of a proficiency die roll.
+
+    :returns: the result of a proficiency die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 11)
@@ -182,6 +226,11 @@ def roll_proficiency() -> RollResult:
 
 
 def roll_challenge() -> RollResult:
+    '''
+    :brief: returns the result of a challenge die roll.
+
+    :returns: the result of a challenge die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 11)
@@ -206,6 +255,11 @@ def roll_challenge() -> RollResult:
 
 
 def roll_force() -> RollResult:
+    '''
+    :brief: returns the result of a force die roll.
+
+    :returns: the result of a force die roll.
+    '''
     result: RollResult = get_empty_roll_result()
 
     n: int = randint(0, 11)
