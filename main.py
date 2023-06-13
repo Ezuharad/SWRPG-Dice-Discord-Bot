@@ -108,7 +108,7 @@ def get_text_result_summary_from_roll(roll: RollResult) -> str:
     :returns: a generated result based on the values present in `roll`.
     '''
     # Unpack net roll into human-readable variables
-    success = roll[ResultKeys.SUCCESS.value] > 0
+    success = roll[ResultKeys.SUCCESS.value] + roll[ResultKeys.TRIUMPH.value] - roll[ResultKeys.DESPAIR.value] > 0
     advantage = roll[ResultKeys.ADVANTAGE.value] > 0
     threat = roll[ResultKeys.THREAT.value] > 0
     triumph = roll[ResultKeys.TRIUMPH.value] > 0
@@ -199,7 +199,7 @@ async def roll(ctx,
     '''
     # Case for invalid roll passed
     if arg == None or not validate_roll_args(arg.lower()):
-        await ctx.send(f'{ctx.message.author.mention} Received an invalid roll! Use the highlighted characters for rolls:\r'\
+        await ctx.send(f'{ctx.message.author.mention} sent an invalid roll! Use the highlighted characters for rolls:\r'\
                     f'**f**orce ({EmojiKeys.FORCE.value})\r'\
                     f'**p**roficiency ({EmojiKeys.PROFICIENCY.value})\r'\
                     f'**a**bility ({EmojiKeys.ABILITY.value})\r'\

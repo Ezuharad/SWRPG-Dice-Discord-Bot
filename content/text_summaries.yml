@@ -1,7 +1,10 @@
 light_dark:
   - '{} the Force acts in mysterious ways...'
+  - '{} the Force maintains a balance...'
 light:
   - '{} the Force bends in favor of our heroes!'
+  - '{} the Force favors our heroes!'
+  - '{} the Force twists in favor of the light!'
 dark:
   - '{} the Force twists in favor of the dark side!'
 triumph_despair:
@@ -10,16 +13,27 @@ triumph:
   - '{} is triumphant!'
 despair:
   - '{} is filled with despair!'
+  - '{}, your time is nigh!'
 success_advantage:
   - '{} succeeded with advantage!'
+  - '{} succeeds with advantage!'
+  - '{} succeeded with ease!'
+  - '{} succeeds with ease!'
 success_threat:
   - '{} succeeded, but faces a new challenge!'
+  - '{} succeeds, but faces a new challenge!'
 success:
   - '{} succeeded!'
+  - '{} succeeds!'
   - '{} is met with success!'
+  - '{} found success!'
+  - '{} finds success!'
 failure_advantage:
   - '{} failed, but has a second chance!'
+  - '{} fails, but has a second chance!'
 failure_threat:
   - '{} failed, and now faces dire consequences!'
+  - '{} fails, and now faces dire consequences!'
 failure:
   - '{} failed!'
+  - '{} fails!'
