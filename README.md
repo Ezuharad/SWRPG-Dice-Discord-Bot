@@ -37,3 +37,11 @@ After this you will need to create a [conda environment](https://docs.conda.io/e
 Finally, create the file **API_KEY** in the root directory of the project and put your [Discord API key](https://discord.com/developers/docs/reference) in the first line.
 
 Optionally, if you want to add emoji to your instance of the bot, you will need to upload the assets you want from **content/emoji_assets** to your discord server, then replace the contents of **src/emoji.py** with the IDs for your server.
+
+## Credits
+Authors of the project can be found in [AUTHORS.md](./AUTHORS.md).
+
+Additionally, all assets in **emoji_assets** as well as rules for dice manipulation are owned by Fantasy Flight games. Many thanks to them for creating an incredible RPG system.
+
+## See Also
+The much more extensive [D1-C3](https://discord.bots.gg/bots/294576386696544273) bot created by SkyJedi.
