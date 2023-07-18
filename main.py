@@ -6,7 +6,6 @@ import discord
 import random
 import yaml
 from discord.ext import commands
-from enum import Enum
 from typing import Optional
 
 from src.dice import *

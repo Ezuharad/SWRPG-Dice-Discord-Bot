@@ -11,6 +11,7 @@ triumph_despair:
   - '{} The Force is equally benevolent and cruel.'
 triumph:
   - '{} is triumphant!'
+  - '{} triumphs!'
 despair:
   - '{} is filled with despair!'
   - '{}, your time is nigh!'
@@ -31,9 +32,12 @@ success:
 failure_advantage:
   - '{} failed, but has a second chance!'
   - '{} fails, but has a second chance!'
+  - '{} is undeterred by failure!'
+  - '{} faces a setback!'
 failure_threat:
   - '{} failed, and now faces dire consequences!'
   - '{} fails, and now faces dire consequences!'
 failure:
   - '{} failed!'
   - '{} fails!'
+  - '{} is met with failure!'
